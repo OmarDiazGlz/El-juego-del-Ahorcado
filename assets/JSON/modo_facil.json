@@ -1,0 +1,72 @@
+{
+  "sal": [
+    {
+      "pista1": "Condimento para las comidas",
+      "pista2": "Puede proceder del agua del mar"
+    }
+  ],
+
+  "coche": [
+    {
+      "pista1": "Vehículo",
+      "pista2": "Hace falta obtener un carnet para poder conducirlo"
+    }
+  ],
+
+  "Pluton": [
+    {
+      "pista1": "Estaba en nuestro sistema pero ya no",
+      "pista2": "Dejo de estar en el sistema solar porque lo declararon gaseoso"
+    }
+  ],
+  "raton": [
+    {
+      "pista1": "Mamífero",
+      "pista2": "En tu sótano y tu pc"
+    }
+  ],
+
+  "goma": [
+    {
+      "pista1": "Si te equivocas no te preocupes",
+      "pista2": "Desde tus tenis hasta tus garabatos frotame donde quieras"
+    }
+  ],
+  "rama": [
+    {
+      "pista1": "Cuando te despistas y te llevas la conversación",
+      "pista2": "También las encontraras en los árboles y códigos"
+    }
+  ],
+  "gafas": [
+    {
+      "pista1": "Te protegen y/o corrigen tus defectos",
+      "pista2": "Para alguna gente hacen que la vida sea HD"
+    }
+  ],
+  "marco": [
+    {
+      "pista1": "Los veras en tu casa y museos",
+      "pista2": "Alguien con su nombre tiene un mono llamado Amelio"
+    }
+  ],
+  "arma": [
+    {
+      "pista1": "Objetos como un florero o un tanque",
+      "pista2": "Objetos con  intencion lesiva o que producen un daño personal"
+    }
+  ],
+  "ficha": [
+    {
+      "pista1": "La tiene tu médico y tu casino mas cercano",
+      "pista2": "Vrb. 3ªp.sing.; registra su asistencia"
+    }
+  ],
+  "taza": [
+    {
+      "pista1": "Mantiene tus dedos a salvo de quemaduras",
+      "pista2": "Imprescindible en tu café"
+    }
+  ]
+}
+

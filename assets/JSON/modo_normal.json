@@ -1,0 +1,71 @@
+{
+    "altura": [
+      {
+        "pista1": "Las circunstancias se pueden establecer de acuerdo a esta palabra",
+        "pista2": "Requisito no indispensable para jugar al baloncesto"
+      }
+    ],
+  
+    "halago": [
+      {
+        "pista1": "Funciona muy bien para hacer la pelota a alguien",
+        "pista2": "Tu abuela te dedicaba muchos cuando eras pequeño/a"
+      }
+    ],
+  
+    "inerte": [
+      {
+        "pista1": "Adjetivo que se suele asociar a cadáveres",
+        "pista2": "Algo tan quieto que parece no tener vida"
+      }
+    ],
+  
+    "objeto": [
+      {
+        "pista1": "Elemento universal de JavaScript",
+        "pista2": "Cosa material inanimada, de tamaño pequeño o mediano, que se puede percibir por los sentidos"
+      }
+    ],
+  
+    "cumplidor": [
+      {
+        "pista1": "Persona que alcanza el objetivo que se espera de ella",
+        "pista2": "Adjetivo; Sinónimo de diligente"
+      }
+    ],
+  
+    "urgente": [
+      {
+        "pista1": "Sinónimo de imperioso",
+        "pista2": "Que necesita ser solucionado lo antes posible"
+      }
+    ],
+  
+    "posible": [
+      {
+        "pista1": "Que se puede realizar",
+        "pista2": "Es ... que puedas adivinar esta palabra"
+      }
+    ],
+  
+    "aptitud": [
+      {
+        "pista1": "No debe confundirse con actitud",
+        "pista2": "Capacidad de una persona para realizar adecuadamente una actividad"
+      }
+    ],
+  
+    "radiante": [
+      {
+        "pista1": "Hoy te has levantado ...",
+        "pista2": "Brilla con intensidad"
+      }
+    ],
+  
+    "omnivoro": [
+      {
+        "pista1": "Cuando llegas de fiesta y abres la nevera",
+        "pista2": "Lo tienes en común con los cerdos"
+      }
+    ]
+  }

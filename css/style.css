@@ -1,0 +1,469 @@
+@font-face {
+  font-family: 'nene_weno';
+  src: url('../assets/font/NeNe_WeNo_Width_HandWrite.ttf');
+}
+
+@font-face {
+  font-family: 'handwrited';
+  src: url('../assets/font/handwrited.ttf');
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Lato:wght@300;400&family=Roboto:wght@100&display=swap');
+
+  
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+}
+
+:root {
+  --background-light: rgb(112, 187, 112);
+  --background-dark: #000000;
+  --text-color-postsit: #feff9c;
+}
+
+body {
+  background-image: url('../assets/image/bg-body-class.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.5s;
+}
+
+menu > button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 0.5rem;
+  color: white;
+}
+
+menu {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0.8rem;
+}
+main {
+  background-image: url('../assets/image/bg-main-notebook.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section > button {
+  height: 2rem;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'handwrited';
+  font-weight: bold;
+  cursor: pointer;
+  color: #345aa9;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+h1 {
+  font-family: 'nene_weno', sans-serif;
+  font-size: 19px;
+}
+
+h3{
+  font-family:'nene_weno', sans-serif;
+  text-align: center;
+  color: #345aa9;
+}
+
+#palabraJuego{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.25rem;
+  color: white;
+  font-weight:900;
+}
+
+#keyboard button{
+  background-color: var(--text-color-postsit);
+
+}
+
+/*Main screen*/
+
+#main-screen {
+  display: none;
+  position: relative;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15% auto; 
+}
+
+.lettervisu{
+  color: whitesmoke;
+  font-size: 2rem;
+  font-family: 'nene_weno';
+  ;
+}
+.col {
+  width: 95%;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Contador de puntos */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  height: 80px;
+  width: 100%;
+}
+
+.containercontador{
+  padding: 4px;
+  background-color: #feff9c;
+  border-radius: 10% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contador {
+  font-family: 'handwrited';
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  width: 75px;
+  background-color: #7afcff;
+  border-radius: 15% ;
+  margin-bottom: 5px;
+}
+/* Botón solicitar pistas */
+#buttonPistas{
+  font-family:'nene_weno', sans-serif;
+  height: 60px;
+  color: #345aa9;
+  font-size: 2rem;
+  border-radius: 10%;
+  padding: 0 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border: none;
+  background-color: #feff9c;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#buttonPistas:hover{
+  transform: scale(1.05);
+}
+
+/* Botón oneshot*/
+
+#buttononeshot{
+  font-family:'nene_weno', sans-serif;
+  height: 60px;
+  color: #345aa9;
+  font-size: 2rem;
+  border-radius: 10%;
+  padding: 0 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border: none;
+  background-color: #feff9c;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#buttononeshot:hover{
+  transform: scale(1.05);
+}
+
+/* Generador de pistas*/
+
+#pistas{
+  height: 50px;
+  width: 150px;
+  background-color: white;
+}
+
+#showPistas{
+ display: none;
+  height: 150px;
+  width: 150px;
+  background-color: white;
+}
+
+/* Hangman */
+.containerhorca{
+  height: 100%;
+  max-height: 40vh;
+  width: 100%;
+  border-radius: 10px ;
+  top: 11%;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.basehorca{
+  bottom: 10%;
+  width: 25%; 
+  height: 4px; 
+  background-color: #000; 
+  position: absolute;
+  left: 30%; 
+} 
+
+.verticalhorca{
+  bottom: 10%;
+  width: 4px; 
+  height: 75%; 
+  background-color: #000; 
+  position: absolute;
+  left: 32%; 
+}
+
+.baseseghorca{
+  top: 15%;
+  width: 18%; 
+  height: 4px; 
+  background-color: #000; 
+  position: absolute;
+  left: 32%; 
+}
+
+.verticalseghorca{
+  top: 15%;
+  width: 4px; 
+  height: 10%; 
+  background-color: #000; 
+  position: absolute;
+  left: 50%; 
+}
+
+.headstick{
+  display: none;
+  top: 24%;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  border: 4px solid #000;
+  position: absolute;
+  left: 50.1%; 
+  transform: translate(-48%);
+  background-image: url(../assets/image/hangman-face.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: black;
+  z-index: 3;
+}
+
+.bodystick{
+  display: none;
+  top: 27%;
+  width: 4px; 
+  height: 22%; 
+  background-color: #000; 
+  position: absolute;
+  left: 50%; 
+  transform: translate(0%, 32px);
+  z-index: 2;
+}
+
+.rightarmstick {
+  display: none;
+  top: 33.5%;
+  width: 4px;
+  height: 50px;
+  background-color: #000;
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(400%, 40%) rotate(-45deg);
+} 
+
+.leftarmstick{
+  display: none;
+  top: 33.5%;
+  width: 4px;
+  height: 50px;
+  background-color: #000;
+  position: absolute;
+  margin-left: 50.0%;
+  transform: translate(-400%, 40%) rotate(-135deg);
+} 
+
+.rightlegstick{
+  display: none;
+  top: 50%;
+  width: 4px;
+  height: 50px;
+  background-color: #000;
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(400%, 20px) rotate(-45deg);
+}
+
+.leftlegstick{
+  display: none;
+  top: 50%;
+  width: 4px;
+  height: 50px;
+  background-color: #000;
+  position: absolute;
+  margin-left: 50.0%;
+  transform: translate(-400%, 20px) rotate(-135deg);
+} 
+
+/* Pantallas Win & Lose */
+
+#pantallaWin{
+  display: none;
+}  
+#loseScreen{
+  display: none;
+}
+
+.finalScreen{
+  margin: auto;
+  background-image: url('../assets/image/bg-winscreen.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 10%
+}
+
+.finalScreen h2 {
+  font-family:'nene_weno', sans-serif;
+  color: #345aa9;
+  font-size: 1.8rem;
+  margin-top: 50px;
+}
+
+.finalScreen button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  font-family: 'handwrited';
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #feff9c;
+  color: #345aa9;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.containercontadorloose {
+border: #cd585a 3px solid;
+border-radius: 10px;
+background-color: white;
+/* border-radius: 0 0 0 36%; */
+margin-bottom: 1rem;
+padding: 10px;
+
+}
+#contadorloose{
+  background-color:#feff9c;
+  margin: 0.4rem;
+  border-radius: 10px;
+text-align: center;
+font-size: 1.5rem;
+color:red;
+font-family: "handwrited";
+font-weight: 600;
+}
+#resetLose{
+  margin-bottom: 3rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 28px;
+    margin-bottom: 1.1rem;
+  }
+
+  section > button {
+    font-size: 18px;
+  }
+
+  .lettervisu{    
+    font-size: 3rem;;
+  }
+  .col {
+    height: 80vh;
+    gap: 70px;
+  }
+  span{
+    font-size: 3rem;
+  }
+
+  .finalScreen{
+    width: 45%;  
+    border-radius: 10px;
+    left: 28%;
+    top: 20%;
+  }
+
+  .finalScreen h2 {
+    height: 4rem;
+    font-size: 2.4rem;
+    margin-top: 5px
+  }
+  .winButtons{
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  }
+
+.finalScreen video {
+  width: 450px;
+  height: 360px;
+}
+  .finalScreen button {
+    width: 300px;
+    height: 45px;
+    font-family: 'handwrited';
+    font-size: 18px;
+  }
+}
+

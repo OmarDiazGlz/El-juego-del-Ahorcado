@@ -1,0 +1,138 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El juego del ahorcado</title>
+  <link rel="icon" href="./assets/image/hangman-favicon.ico">
+
+  <link rel="stylesheet" href="./css/style.css" id="darkCSS" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <menu>
+        <!-- Botón resetear la partida -->
+        <button onclick="reset('true')">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <!-- Botón silenciar música -->
+        <button id="mute">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <!-- Botón alternar modo oscuro/claro -->
+        <button onclick="lightDark()" id="lightDark">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </menu>
+    </nav>
+  </header>
+
+  <main id="main-menu">
+    <h1>El juego del ahorcado</h1>
+
+    <!-- Botones para elegir dificultad -->
+    <section>
+      <button onclick="loadJSON('facil')">Modo fácil</button>
+      <button onclick="loadJSON('normal')">Modo normal</button>
+      <button onclick="loadJSON('dificil')">Modo difícil</button>
+      <button onclick="loadJSON('samu')">Modo Samu</button>
+    </section>
+  </main>
+
+  <div id="main-screen">
+
+    <div class="container">
+      <div class="containercontador">
+        <h3>Puntos</h3>
+        <p id="contador">0</p>
+      </div>
+      <button id="buttononeshot" onclick="oneshotbutton()"><i class="fa-solid fa-crosshairs"></i></button>
+      <button id="buttonPistas"><i class="fa-regular fa-lightbulb"></i></button>
+    </div>
+
+
+    <div class="containerhorca">
+      <div class="basehorca"></div>
+      <div class="verticalhorca"></div>
+      <div class="baseseghorca"></div>
+      <div class="verticalseghorca"></div>
+      <div class="headstick" id="headstick"></div>
+      <div class="rightarmstick" id="rightarmstick"></div>
+      <div class="leftarmstick" id="leftarmstick"></div>
+      <div class="bodystick" id="bodystick"></div>
+      <div class="rightlegstick" id="rightlegstick"></div>
+      <div class="leftlegstick" id="leftlegstick"></div>
+    </div>
+
+    <div class="flex-row">
+      <div class="col">
+        <div id="palabraJuego"></div>
+        <div id="keyboard"></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Final screens-->
+  <section class="finalScreen" id="pantallaWin">
+    <h2>¡Has ganado!</h2>
+    <video src="./assets/video/" width="350" height="260" autoplay poster="./assets/image/Win.png"></video>
+    <div id="puntuacion"></div>
+    <div class="winButtons">
+      <button onclick="reset('true')">Volver a empezar</button>
+      <button onclick="reset('false')">Continuar</button>
+    </div>
+  </section>
+
+  <section class="finalScreen" id="loseScreen">
+    <h2> !Has fallado!</h2>
+    <video src="./assets/video/" width="350" height="260" autoplay poster="./assets/image/gameOver.png"></video>
+    <div id="puntuacion"></div>
+    <div class="loseButtons">
+
+      <div class="containercontadorloose">
+        <h3>Puntos</h3>
+        <p id="contadorloose">0</p>
+      </div>
+
+      <button id="resetLose" onclick="reset('true')">Inténtalo de nuevo</button>
+    </div>
+  </section>
+
+  </div>
+  <span>
+    <audio id="winner">
+      <source src="./assets/music/resultGame/winner.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <audio id="gameOver">
+      <source src="./assets/music/resultGame/ocarina-of-time-73-game-over.mp3" type="audio/mp3" delay>
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <audio id="letterfail">
+      <source src="./assets/music/light-version/letterfail.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <audio id="question">
+      <source src="./assets/music/light-version/question.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <audio id="oneshotaudio">
+      <source src="./assets/music/light-version/Oneshoot.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <audio id="lettersuccess">
+      <source src="./assets/music/light-version/letter-success.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="./js/functions.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/config.js"></script>
+  </span>
+</body>
+
+</html>

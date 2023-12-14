@@ -1,0 +1,47 @@
+{
+  "patata": [
+    {
+      "pista1": "Palabra que utilizas siempre como ejemplo en clase."
+    }
+  ],
+  "literal": [
+    {
+      "pista1": "Palabra que utilizas siempre en clase."
+    }
+  ],
+  "flexbox": [
+    {
+      "pista1": "Forma simple y potente de diseñar los componentes de una página, determinando cómo se distribuirá el espacio, cómo será alineado el contenido y cómo se ordenarán visualmente los elementos. El contenido se puede organizar fácilmente de forma vertical u horizontal, y se puede distribuir a lo largo de un solo eje o envolverse en varias líneas."
+    }
+  ],
+  "grid": [
+    {
+      "pista1": "Es un sistema de diseño muy flexible que se enfoca en filas y columnas para crear estructuras de diseño. Aunque a primera vista puede parecer similar al diseño con tablas, en realidad es mucho más poderoso y versátil."
+    }
+  ],
+  "mirroring": [
+    {
+      "pista1": "Técnica patentada por Luis Domínguez para desestructurar arrays."
+    }
+  ],
+  "dom": [
+    {
+      "pista1": "Representación en memoria de un documento HTML, compuesto por nodos y objetos individuales interconectados"
+    }
+  ],
+  "array": [
+    {
+      "pista1": "Colección ordenada de valores almacenados en una única variable"
+    }
+  ],
+  "objeto": [
+    {
+      "pista1": "Todo en JavaScript lo es, excepto lo que no lo es, que también lo es"
+    }
+  ],
+  "json": [
+    {
+      "pista1": "También llamado en clase Jackson, Jhonson, Yeison, etc."
+    }
+  ]
+}
